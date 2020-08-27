@@ -37,3 +37,12 @@ class ModelTests(TestCase):
 
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
+    
+    def test_user_can_be_superhost(self):
+        """Test user can become superhost"""
+        user = get_user_model().objects.create(
+            email='user@user.com',
+            password='userpassword123'
+        )
+        user.superhost = True
+        self.assertTrue(user.superhost)

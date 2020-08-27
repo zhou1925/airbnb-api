@@ -29,6 +29,7 @@ DJANGO_APPS = [
 
 PROJECT_APPS = [
     'core.apps.CoreConfig',
+    'users.apps.UsersConfig',
     #'accounts.apps.AccountsConfig',
     #'rooms.apps.RoomsConfig',
     #'reviews.apps.ReviewsConfig',
@@ -37,7 +38,7 @@ PROJECT_APPS = [
     #'conversations.apps.ConversationsConfig',
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = ['rest_framework',]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
