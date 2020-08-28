@@ -23,7 +23,7 @@ def sample_house_rule():
 
 def sample_user():
     """Create and return an user"""
-    return get_user_model().objects.create(
+    return get_user_model().objects.create_user(
         email = 'user@user.com',
         password = 'userpassword'
     )
